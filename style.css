@@ -1,0 +1,207 @@
+body {
+    font-family: 'Inter', 'Segoe UI', sans-serif;
+    background-color: #F4F7F9;
+    margin: 0;
+    display: flex;
+}
+
+.login-body {
+    background: radial-gradient(circle at 70% 30%, #004a92 0%, #002147 70%, #001529 100%);
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-container {
+    width: 380px;
+    background: #ffffff;
+    padding: 50px 40px;
+    border-radius: 12px;
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.6);
+    border-top: 8px solid #FFCC00;
+    text-align: center;
+}
+
+.sidebar {
+    width: 260px;
+    background-color: #003366;
+    height: 100vh;
+    color: white;
+    position: fixed;
+    z-index: 100;
+}
+
+.sidebar-header {
+    padding: 25px 20px;
+    text-align: center;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.sidebar-logo {
+    width: 70px;
+    margin-bottom: 10px;
+}
+
+.sidebar-menu {
+    list-style: none;
+    padding: 20px 0;
+    margin: 0;
+}
+
+.sidebar-menu li a {
+    padding: 15px 25px;
+    display: block;
+    color: #cbd5e0;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.sidebar-menu li a:hover {
+    background: rgba(255,255,255,0.1);
+    color: #FFCC00;
+}
+
+.main-content {
+    margin-left: 260px;
+    width: calc(100% - 260px);
+    min-height: 100vh;
+}
+
+.top-bar {
+    background: white;
+    padding: 0 30px;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.nav-icons {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.nav-icon-link {
+    text-decoration: none;
+    font-size: 20px;
+    color: #003366;
+    background: #f1f5f9;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+}
+
+.container { padding: 25px; }
+
+.content-card {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    margin-bottom: 25px;
+    overflow: hidden;
+}
+
+.card-header {
+    background: #003366;
+    color: white;
+    padding: 12px 20px;
+    font-weight: bold;
+}
+
+.card-body { padding: 20px; }
+
+.toolbar { display: flex; justify-content: center; gap: 10px; margin-bottom: 20px; }
+.tool-btn { background: white; border: 1px solid #ccc; padding: 8px 15px; cursor: pointer; border-radius: 4px; font-weight: 600; color: #003366; }
+
+.tabs { display: flex; background: #003366; }
+.tab-btn { padding: 12px 15px; border: none; background: transparent; color: #ccc; cursor: pointer; font-size: 11px; font-weight: bold; }
+.tab-btn.active { background: #FFCC00; color: #003366; }
+.tab-content { display: none; padding: 25px; }
+.tab-content.active { display: block; }
+
+.personal-container { display: flex; gap: 30px; }
+.profile-pic-area { display: flex; flex-direction: column; align-items: center; width: 220px; border-right: 1px solid #eee; padding-right: 20px; }
+.profile-circle { width: 180px; height: 180px; border-radius: 50%; border: 4px solid #003366; object-fit: cover; background: #eee; }
+
+.form-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 15px; }
+label { display: block; font-size: 12px; margin-bottom: 5px; color: #555; font-weight: 600; }
+input, select { width: 100%; padding: 8px; border: 1px solid #ddd; border-radius: 4px; box-sizing: border-box; }
+
+.data-box { border: 1px solid #eee; min-height: 120px; margin-top: 15px; background: #fafafa; padding: 10px; border-radius: 4px; }
+.btn-yellow { background: #FFCC00; color: #003366; border: none; padding: 10px 20px; font-weight: bold; cursor: pointer; border-radius: 4px; }
+
+table { width: 100%; border-collapse: collapse; }
+table th, table td { padding: 12px; border: 1px solid #eee; text-align: left; font-size: 14px; }
+table th { background: #f8fafc; color: #475569; font-size: 12px; }
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0; top: 0; width: 100%; height: 100%;
+    background: rgba(0,0,0,0.7);
+    justify-content: center;
+    align-items: center;
+}
+
+/* Update these sections in your style.css */
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0; top: 0; width: 100%; height: 100%;
+    background: rgba(0,0,0,0.7);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    width: 350px; /* Reduced size for Department and Position modals */
+    border-top: 8px solid #FFCC00;
+    position: relative; /* Needed for the absolute position of the X button */
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+/* The Close (X) Button */
+.close-btn {
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #003366;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.close-btn:hover {
+    color: #ff0000;
+}
+
+.modal-content h3 {
+    margin-top: 0;
+    color: #003366;
+    font-size: 18px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+@media print {
+    body * { visibility: hidden; }
+    #printArea, #printArea * { visibility: visible; }
+    #printArea { position: absolute; left: 0; top: 0; width: 100%; }
+    .sidebar, .top-bar, .toolbar, .tabs, .btn-yellow, .no-print { display: none !important; }
+}
